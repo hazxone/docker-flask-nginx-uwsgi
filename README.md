@@ -6,10 +6,11 @@ Provide Dockerfile and all applicable config and base Flask scripts necessary to
 ## Why do I use it?:
 
 With this container and a built image (or pulling the image from ucnt/flaskwebpage), <b>you can get an HTTP or HTTPS server setup in 2 commands</b>:
-- sudo docker build -t flaskwebpage .
-  - HTTP: sudo docker run -dit -p 80:80 --restart=always --name flaskwebpage flaskwebpage <br>
+- sudo docker build -t flaskwebpage .<br>
+THEN<br>
+- HTTP: sudo docker run -dit -p 80:80 --restart=always --name flaskwebpage flaskwebpage <br>
   OR
-  - HTTPS (change parameters): sudo docker run -dit -p 80:80 -p 443:443 --restart=always --name flaskwebpage flaskwebpage "-d example.com,www.example.com -n example.com -e my@email.com" 
+- HTTPS (change parameters): sudo docker run -dit -p 80:80 -p 443:443 --restart=always --name flaskwebpage flaskwebpage "-d example.com,www.example.com -n example.com -e my@email.com" 
 
 ## More thoughts:
 https://www.mattsvensson.com/nerdings/2017/6/30/docker-flasknginxuwsgi
