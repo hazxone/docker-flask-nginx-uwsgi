@@ -3,6 +3,10 @@
 ## Purpose:
 Provide Dockerfile and all applicable config and base Flask scripts necessary to start a webpage, with a script to automate HTTPS re-configuration.
 
+## How to run (my version)
+```sudo docker build -t face .```
+```docker run -it -v /root/flask/docker-flask-nginx-uwsgi/app:/home/flask/app -p 80:80 face```
+
 ## Why do I use it?:
 
 With this container and a built image (or pulling the image from ucnt/flaskwebpage), <b>you can get an HTTP or HTTPS server setup in 2 commands</b>:
