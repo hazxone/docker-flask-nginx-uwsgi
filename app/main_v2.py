@@ -4,7 +4,7 @@ basic_auth = HTTPBasicAuth()
 auth = HTTPTokenAuth('Bearer') 
 from werkzeug import secure_filename
 import face_recognition as fr
-from data.L6SOsgE6HT import users, tokens
+from L6SOsgE6HT import users, tokens
 import uuid
 import cv2
 import os
