@@ -2,3 +2,8 @@ flask
 uwsgi
 requests
 face_recognition
+opencv-python
+flask_httpauth
+scikit-learn
+dlib
+numpy
