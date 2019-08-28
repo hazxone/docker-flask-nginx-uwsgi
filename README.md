@@ -5,7 +5,7 @@ Provide Dockerfile and all applicable config and base Flask scripts necessary to
 
 ## How to run (my version)
 ```sudo docker build -t face .```
-```docker run -it -v /root/flask/docker-flask-nginx-uwsgi/app:/home/flask/app -p 80:80 face```
+```docker run -dit -v /root/flask/docker-flask-nginx-uwsgi/app:/home/flask/app -p 80:80 --restart=always face```
 
 ## Why do I use it?:
 
