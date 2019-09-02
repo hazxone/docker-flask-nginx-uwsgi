@@ -3,6 +3,7 @@ flask
 uwsgi
 requests
 dlib
+joblib
 opencv-python
 scikit-learn
 face_recognition
