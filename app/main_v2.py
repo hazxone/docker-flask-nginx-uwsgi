@@ -87,6 +87,7 @@ def verify_token(token):
 def predict():
     username = g.user
     image = request.files['image']
+    clinic_id = request.form['clinic']
 
     if allowed_file(secure_filename(image.filename)) is False:
         result = {"Status" : "Error", "Message" : "File type not allowed"}
@@ -122,7 +123,7 @@ def predict():
 
     best_class_prob, best_class_indices = predict_svm(model, emb)
     if best_class_prob > 0.4:
-        result = {"Status" : "Success", "Identity" : class_list[best_class_indices]}
+        result = {"Status" : "Success", "Identity" : class_list[best_class_indices], "Clinic_Id" : clinic_id}
         return make_response(jsonify(result), 200)
     else:
         result = {"Status" : "Failed", "Identity" : "Unknown"}
